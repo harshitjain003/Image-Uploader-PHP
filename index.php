@@ -79,6 +79,11 @@ $get = mysqli_query($con,$sql);
     $file_tmp_name = $_FILES["image"]["tmp_name"];
       $destination = 'images/'.$file_name;
       move_uploaded_file($file_tmp_name,$destination);
+      echo '
+      <script>
+      alert("Image Successfully Uploaded")
+      </script>
+      ';
       header('location:index.php');
   }
   
